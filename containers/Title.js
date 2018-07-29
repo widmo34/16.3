@@ -14,7 +14,7 @@ class Title extends React.Component{
         (
             <div><h1>Aplikacja kucharska</h1>
                 <ul>
-                    <li>zrobić menu górne </li>
+                    <li>zrobić menu górned </li>
                     <li>napisać moduł dodawanie przepisów</li>
                     <li>napisać moduł dodawania komentarzy pod przepisem</li>
                 </ul>
