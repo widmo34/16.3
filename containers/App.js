@@ -12,12 +12,16 @@ class App extends React.Component{
         this.state = {
             data: [
                 {
-                    text: 'radek',
                     id: 1,
+                    text: 'clean room'
                 },
                 {
-                    text: 'Bohdan',
-                    id:2,
+                    id: 2,
+                    text: 'wash the dishes'
+                },
+                {
+                    id: 3,
+                    text: 'feed my cat'
                 }
             ]
         };
@@ -49,7 +53,12 @@ class App extends React.Component{
         return(
             <div className={style.TodoApp}>
                 Tutaj pojawią sie komponenty naszej aplikacji
-                <Title list={this.state.data}/>
+                <Title
+                 list={this.state.data} 
+               
+                 
+                 />
+                
 
             </div>    
         )
