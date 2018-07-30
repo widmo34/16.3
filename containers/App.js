@@ -4,6 +4,8 @@ import style from '../App.css';
 import Title from '../src/components/Title';
 import TodoForm from '../src/components/TodoForm'
 import {hot} from 'react-hot-loader';
+import TodoList from '../src/components/TodoList';
+
 
 
 class App extends React.Component{
@@ -11,10 +13,22 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            data: [],
-            test: 'radek',
-           };
-    }
+            data : [
+                {
+                id: 1,
+                    text: 'clean room'
+                },
+                {
+                id: 2,
+                    text: 'wash the dishes'
+                },
+                {
+                id: 3,
+                    text: 'feed my cat'
+                }]
+            }
+        }                        
+        
     
     
 
@@ -50,6 +64,7 @@ class App extends React.Component{
                 Tutaj pojawią sie komponenty naszej aplikacji
                 <Title list={this.state.data} />
                 <TodoForm onSearch={this.addTodo} />
+          
                
 
             </div>    

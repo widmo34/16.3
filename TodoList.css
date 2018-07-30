@@ -1,5 +1,8 @@
 
 
-span{
-    background-color: cornflowerblue  
+.task{
+    background-color: cornflowerblue;
+    width:300px; 
 }
+
+

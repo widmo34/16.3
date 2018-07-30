@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,7 +92,7 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(10);
+  module.exports = __webpack_require__(11);
 } else {}
 
 /***/ })),
@@ -522,7 +522,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(26);
+var	fixUrls = __webpack_require__(27);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -848,15 +848,87 @@ function updateLink (link, options, obj) {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(11);
+var _TodoList = __webpack_require__(29);
+
+var _TodoList2 = _interopRequireDefault(_TodoList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TodoList = (function (_React$Component) {
+    _inherits(TodoList, _React$Component);
+
+    function TodoList(props) {
+        _classCallCheck(this, TodoList);
+
+        return _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).call(this, props));
+    }
+
+    _createClass(TodoList, [{
+        key: 'delete',
+        value: function _delete(event) {
+            this.props.toDelete(event.target.id);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: _TodoList2.default.task },
+                _react2.default.createElement(
+                    'button',
+                    { id: this.props.task.id, onClick: function onClick(event) {
+                            return _this2.delete(event);
+                        } },
+                    ' delete task'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    this.props.task.text
+                )
+            );
+        }
+    }]);
+
+    return TodoList;
+})(_react2.default.Component);
+
+exports.default = TodoList;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(12);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(19);
+var _App = __webpack_require__(20);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -865,7 +937,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1001,7 +1073,7 @@ var X = { Children: { map: function map(a, b, e) {
     Z = Y && X || Y;module.exports = Z.default ? Z.default : Z;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1027,11 +1099,11 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(13);
 } else {}
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1053,12 +1125,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var aa = __webpack_require__(2),
     ba = __webpack_require__(0),
-    m = __webpack_require__(13),
+    m = __webpack_require__(14),
     p = __webpack_require__(1),
     v = __webpack_require__(4),
-    da = __webpack_require__(14),
-    ea = __webpack_require__(15),
-    fa = __webpack_require__(16),
+    da = __webpack_require__(15),
+    ea = __webpack_require__(16),
+    fa = __webpack_require__(17),
     ha = __webpack_require__(3);
 function A(a) {
   for (var b = arguments.length - 1, c = "https://reactjs.org/docs/error-decoder.html?invariant=" + a, d = 0; d < b; d++) {
@@ -3123,7 +3195,7 @@ var Ai = { default: vi },
     Bi = Ai && vi || Ai;module.exports = Bi.default ? Bi.default : Bi;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3162,7 +3234,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3205,7 +3277,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3278,7 +3350,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3293,7 +3365,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(17);
+var isTextNode = __webpack_require__(18);
 
 /*eslint-disable no-bitwise */
 
@@ -3321,7 +3393,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3336,7 +3408,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(18);
+var isNode = __webpack_require__(19);
 
 /**
  * @param {*} object The object to check.
@@ -3349,7 +3421,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3380,7 +3452,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3396,19 +3468,27 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _uuid = __webpack_require__(21);
+var _uuid = __webpack_require__(22);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
-var _App = __webpack_require__(24);
+var _App = __webpack_require__(25);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Title = __webpack_require__(27);
+var _Title = __webpack_require__(28);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _reactHotLoader = __webpack_require__(31);
+var _TodoForm = __webpack_require__(31);
+
+var _TodoForm2 = _interopRequireDefault(_TodoForm);
+
+var _reactHotLoader = __webpack_require__(32);
+
+var _TodoList = __webpack_require__(9);
+
+var _TodoList2 = _interopRequireDefault(_TodoList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3431,40 +3511,36 @@ var App = (function (_React$Component) {
         _this.state = {
             data: [{
                 id: 1,
-                text: 'clean room which is big'
+                text: 'clean room'
             }, {
                 id: 2,
                 text: 'wash the dishes'
             }, {
                 id: 3,
                 text: 'feed my cat'
-            }, {
-                id: 4,
-                text: 'testing'
-            }, {
-                id: 5,
-                text: 'kodilla'
-            }, {
-                id: 6,
-                text: 'asdsdasdasd'
             }]
         };
-
         return _this;
     }
 
     _createClass(App, [{
         key: 'addTodo',
         value: function addTodo(val) {
-            val.preventDefault();
 
             var todo = {
-                text: val.target.value,
+                text: val,
                 id: _uuid2.default.v4()
             };
+            console.log(this.state.tests);
+            alert(this.state.test);
 
             var data = [].concat(_toConsumableArray(this.state.data), [todo]);
             this.setState({ data: data });
+        }
+    }, {
+        key: 'showProp',
+        value: function showProp(a) {
+            alert(a);
         }
     }, {
         key: 'removeTodo',
@@ -3481,10 +3557,8 @@ var App = (function (_React$Component) {
                 'div',
                 { className: _App2.default.TodoApp },
                 'Tutaj pojawi\u0105 sie komponenty naszej aplikacji',
-                _react2.default.createElement(_Title2.default, {
-                    list: this.state.data
-
-                })
+                _react2.default.createElement(_Title2.default, { list: this.state.data }),
+                _react2.default.createElement(_TodoForm2.default, { onSearch: this.addTodo })
             );
         }
     }]);
@@ -3493,10 +3567,10 @@ var App = (function (_React$Component) {
 })(_react2.default.Component);
 
 exports.default = (0, _reactHotLoader.hot)(module)(App);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(20)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(21)(module)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3526,14 +3600,14 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var v1 = __webpack_require__(22);
-var v4 = __webpack_require__(23);
+var v1 = __webpack_require__(23);
+var v4 = __webpack_require__(24);
 
 var uuid = v4;
 uuid.v1 = v1;
@@ -3542,7 +3616,7 @@ uuid.v4 = v4;
 module.exports = uuid;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3656,7 +3730,7 @@ function v1(options, buf, offset) {
 module.exports = v1;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3693,11 +3767,11 @@ function v4(options, buf, offset) {
 module.exports = v4;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -3718,7 +3792,7 @@ if(content.locals) module.exports = content.locals;
 if(false) {}
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)(false);
@@ -3726,7 +3800,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "._3o4Tka9KRN2LIZXZapFHN7{\r\n    background-color: lightsalmon ;\r\n    color: #222;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    align-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "._3o4Tka9KRN2LIZXZapFHN7{\r\n    background-color:lightgreen   ;\r\n    color: #222;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    align-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n\r\n", ""]);
 
 // exports
 exports.locals = {
@@ -3734,7 +3808,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3829,7 +3903,7 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3845,7 +3919,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TodoList = __webpack_require__(28);
+var _TodoList = __webpack_require__(9);
 
 var _TodoList2 = _interopRequireDefault(_TodoList);
 
@@ -3890,73 +3964,6 @@ var Title = (function (_React$Component) {
 exports.default = Title;
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _TodoList = __webpack_require__(29);
-
-var _TodoList2 = _interopRequireDefault(_TodoList);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TodoList = (function (_React$Component) {
-    _inherits(TodoList, _React$Component);
-
-    function TodoList(props) {
-        _classCallCheck(this, TodoList);
-
-        return _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).call(this, props));
-    }
-
-    _createClass(TodoList, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: _TodoList2.default.TodoList },
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    ' ',
-                    _react2.default.createElement(
-                        'span',
-                        null,
-                        '   ',
-                        this.props.task.id,
-                        ' '
-                    ),
-                    '    // ',
-                    this.props.task.text
-                )
-            );
-        }
-    }]);
-
-    return TodoList;
-})(_react2.default.Component);
-
-exports.default = TodoList;
-
-/***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3990,10 +3997,12 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "\r\n\r\nspan{\r\n    background-color: cornflowerblue  \r\n}", ""]);
+exports.push([module.i, "\r\n\r\n._1NsWUhhKCR1Y7GvknMFXA_{\r\n    background-color: cornflowerblue;\r\n    width:300px; \r\n}\r\n\r\n\r\n", ""]);
 
 // exports
-
+exports.locals = {
+	"task": "_1NsWUhhKCR1Y7GvknMFXA_"
+};
 
 /***/ }),
 /* 31 */
@@ -4002,12 +4011,101 @@ exports.push([module.i, "\r\n\r\nspan{\r\n    background-color: cornflowerblue  
 "use strict";
 
 
-if (true) {
-  module.exports = __webpack_require__(32);
-} else {}
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TodoForm = (function (_React$Component) {
+    _inherits(TodoForm, _React$Component);
+
+    function TodoForm(props) {
+        _classCallCheck(this, TodoForm);
+
+        var _this = _possibleConstructorReturn(this, (TodoForm.__proto__ || Object.getPrototypeOf(TodoForm)).call(this, props));
+
+        _this.state = {
+            formText: ''
+        };
+
+        return _this;
+    }
+
+    _createClass(TodoForm, [{
+        key: 'test',
+        value: function test(event) {
+            this.setState({
+                formText: event.target.value
+            });
+        }
+    }, {
+        key: 'onSubmit',
+        value: function onSubmit(event) {
+            event.preventDefault();
+            this.props.onSearch(this.state.formText);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'form',
+                    { onSubmit: function onSubmit(event) {
+                            return _this2.onSubmit(event);
+                        } },
+                    _react2.default.createElement(
+                        'label',
+                        { htmlFor: 'searchText' },
+                        'Add a task to do  '
+                    ),
+                    _react2.default.createElement('input', {
+                        type: 'text',
+                        id: 'taskText',
+                        onChange: function onChange(event) {
+                            return _this2.test(event);
+                        }
+
+                    })
+                )
+            );
+        }
+    }]);
+
+    return TodoForm;
+})(_react2.default.Component);
+
+exports.default = TodoForm;
 
 /***/ }),
 /* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(33);
+} else {}
+
+/***/ }),
+/* 33 */
 /***/ ((function(module, exports, __webpack_require__) {
 
 "use strict";
