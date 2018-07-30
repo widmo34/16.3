@@ -2,46 +2,41 @@ import React from 'react';
 import uuid from 'uuid';
 import style from '../App.css';
 import Title from '../src/components/Title';
+import TodoForm from '../src/components/TodoForm'
+import {hot} from 'react-hot-loader';
 
 
 class App extends React.Component{
     
     constructor(props){
-        
         super(props);
         this.state = {
-            data: [
-                {
-                    id: 1,
-                    text: 'clean room'
-                },
-                {
-                    id: 2,
-                    text: 'wash the dishes'
-                },
-                {
-                    id: 3,
-                    text: 'feed my cat'
-                }
-            ]
-        };
-   
+            data: [],
+            test: 'radek',
+           };
     }
-
     
+    
+
+
     addTodo(val){
-        val.preventDefault();  
-        
+            
         const todo = {
-            text: val.target.value,
+            text: val,
             id: uuid.v4(),
         }
-
+        console.log(this.state.tests);
+        alert(this.state.test)
         
 
         const data = [...this.state.data, todo];
         this.setState({data});
+         
     }
+
+    showProp(a){
+        alert(a);
+     }   
 
 
     removeTodo(id){
@@ -53,21 +48,18 @@ class App extends React.Component{
         return(
             <div className={style.TodoApp}>
                 Tutaj pojawią sie komponenty naszej aplikacji
-                <Title
-                 list={this.state.data} 
+                <Title list={this.state.data} />
+                <TodoForm onSearch={this.addTodo} />
                
-                 
-                 />
-                
 
             </div>    
         )
     }
-
+    
 
 }
 
-export default App;    
+export default hot(module)(App);    
 
 
 
