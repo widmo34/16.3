@@ -22,7 +22,6 @@ class Title extends React.Component{
         return(
             <div>
                 {this.tasks}
-              
             </div>    
         );
     

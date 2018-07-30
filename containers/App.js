@@ -27,31 +27,27 @@ class App extends React.Component{
                     text: 'feed my cat'
                 }]
             }
+            this.addTodo = this.addTodo.bind(this);
+            this.removeTodo = this.removeTodo.bind(this);
+
         }                        
         
     
     
 
-
+    
     addTodo(val){
-            
+             
         const todo = {
             text: val,
             id: uuid.v4(),
         }
-        console.log(this.state.tests);
-        alert(this.state.test)
-        
+        console.log(todo);
 
         const data = [...this.state.data, todo];
         this.setState({data});
          
     }
-
-    showProp(a){
-        alert(a);
-     }   
-
 
     removeTodo(id){
         const reminder = this.state.data.filter(todo => todo.id !== id);
@@ -64,6 +60,7 @@ class App extends React.Component{
                 Tutaj pojawią sie komponenty naszej aplikacji
                 <Title list={this.state.data} />
                 <TodoForm onSearch={this.addTodo} />
+              
           
                
 
