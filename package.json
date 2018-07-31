@@ -26,7 +26,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --hot --env development",
-    "build": "webpack-dev-server --hot --env production"
+    "build": "webpack-dev-server  --env production"
   },
   "keywords": [],
   "author": "",
