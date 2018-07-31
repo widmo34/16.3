@@ -15,7 +15,7 @@ class Title extends React.Component{
  
 
     get tasks(){
-        return this.props.list.map(task => <TodoList key={task.id}  task={task} />)
+        return this.props.list.map(task => <TodoList key={task.id}  task={task} remove={this.props.remove} />)
     }
 
     render(){

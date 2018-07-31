@@ -14,18 +14,7 @@ class App extends React.Component{
         super(props);
         this.state = {
             data : [
-                {
-                id: 1,
-                    text: 'clean room'
-                },
-                {
-                id: 2,
-                    text: 'wash the dishes'
-                },
-                {
-                id: 3,
-                    text: 'feed my cat'
-                }]
+                ]
             }
             this.addTodo = this.addTodo.bind(this);
             this.removeTodo = this.removeTodo.bind(this);
@@ -58,8 +47,9 @@ class App extends React.Component{
         return(
             <div className={style.TodoApp}>
                 Tutaj pojawią sie komponenty naszej aplikacji
-                <Title list={this.state.data} />
+                <Title list={this.state.data} remove={this.removeTodo} />
                 <TodoForm onSearch={this.addTodo} />
+                 
               
           
                

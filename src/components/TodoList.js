@@ -9,11 +9,9 @@ class TodoList extends React.Component{
        
     }
 
-
     delete(event){
-       this.props.toDelete(event.target.id)
+        this.props.remove(event.target.id);
     }
-     
        
  
    
